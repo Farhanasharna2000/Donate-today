@@ -53,6 +53,7 @@ img {
     background-image: url(../images/donation10.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     height: 600px;
     text-align: center;
 }
@@ -60,7 +61,8 @@ img {
 .banner-title {
     font-size: 4rem;
     font-weight: 700;
-    padding: 174px 186px 0 186px;
+    padding: 193px 184px 0 184px;
+    text-align: center;
 }
 
 .banner-description {
@@ -89,8 +91,9 @@ img {
 }
 
 .donate-card {
-    gap: 22px;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin-left: 88px;
 }
 
 .card {
@@ -117,7 +120,7 @@ img {
 .donate-subtitle {
     font-weight: 400;
     font-size: 1rem;
-    margin: 40px 251px 15px;
+    margin: 40px 77px 15px;
     padding-bottom: 15px;
     border-bottom: 1px solid rgb(218, 218, 218);
 }
@@ -232,6 +235,7 @@ img {
     font-size: 1.1rem;
     line-height: 28px;
 }
+
 .form-container {
     background: rgb(255, 244, 214);
     padding: 70px 0;
@@ -239,19 +243,23 @@ img {
     margin: 0 auto;
     margin-bottom: 140px;
 }
+
 form {
     text-align: center;
     margin-top: 15px;
 }
+
 .email {
     padding: 15px 110px 15px 15px;
     border: none;
     border-radius: 5px 0px 0px 5px;
     background: rgb(217, 217, 217);
 }
-.email::placeholder{
+
+.email::placeholder {
     color: rgb(179, 179, 179);
 }
+
 .btn-primary {
     padding: 15px 40px 15px 40px;
     border: none;
@@ -260,17 +268,138 @@ form {
     background: rgb(255, 89, 89);
     margin-left: -5px;
 }
+
 /* footer styles */
 .footer {
     background-color: black;
     height: 170px;
     text-align: center;
 }
+
 .footer-title {
     padding-top: 50px;
     font-size: 2.25rem;
 }
+
 .footer-subtitle {
     padding-top: 30px;
     font-size: .9rem;
+}
+
+@media screen and (max-width:576px) {
+    .banner-container {
+        margin-bottom: 50px;
+    }
+
+    .banner-title {
+        font-size: 1.75rem;
+        padding: 218px 0 0 0;
+    }
+
+    .banner-description {
+        font-size: .9rem;
+        padding: 20px 0 35px 0;
+    }
+
+    .donate-title,
+    .donate-plan-title {
+        margin: 0;
+        font-size: 1.75rem;
+    }
+
+    .donate-description,
+    .donate-plan-description {
+        padding: 0;
+
+    }
+
+    .donate-card {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5px;
+        margin-left: -8px;
+    }
+
+    .donate-subtitle {
+        margin: 11px 77px 15px;
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+
+    .donate-plan-card-container,
+    .donation-container {
+        flex-direction: column;
+    }
+
+    .donate-plan-card {
+        width: 86%;
+    }
+
+    .donation-container {
+        gap: 40px;
+    }
+
+    .donation-title {
+        margin-top: 0;
+        font-size: 1.25rem;
+        font-weight: 700;
+        padding-right: 0;
+    }
+
+    .donation-subtitle {
+        font-size: .9rem;
+        padding: 18px 0 0;
+    }
+
+    .donation,
+    .donation-img,
+    .need,
+    .need-img {
+        width: 100%;
+    }
+
+    .donation-description {
+        padding-right: 0;
+    }
+
+    .need-container {
+        flex-direction: column-reverse;
+    }
+
+    .need-title {
+        margin-top: 0;
+        font-size: 1.75rem;
+        padding-right: 0;
+    }
+
+    .need-subtitle {
+        font-size: .9rem;
+        padding: 18px 0 0 0;
+    }
+
+    .need-description {
+        padding: 18px 0 45px 0;
+    }
+
+    .update-title {
+        font-size: 1.75rem;
+    }
+
+    .update-description {
+        padding: 20px 0 33px 0;
+        font-size: .9rem;
+    }
+
+    .form-container {
+        width: 90%;
+        margin-bottom: 50px;
+    }
+
+    .email {
+        padding: 15px 60px 15px 15px;
+        margin-bottom: 20px;
+    }
+
+    .footer-title {
+        font-size: 1.75rem;
+    }
 }
